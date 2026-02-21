@@ -1,59 +1,55 @@
 import { portfolioData } from '../data/portfolioData';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-slate-900 to-slate-800 shadow-lg">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+          <Link to="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 hover:opacity-80">
             {portfolioData.name.split(' ')[0]}
-          </div>
+          </Link>
           
           <ul className="hidden md:flex space-x-8">
             <li>
-              <button
-                onClick={() => scrollToSection('hero')}
+              <Link
+                to="/"
                 className="text-gray-300 hover:text-blue-400 transition duration-300"
               >
                 Home
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection('about')}
+              <Link
+                to="/about"
                 className="text-gray-300 hover:text-blue-400 transition duration-300"
               >
                 About
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection('projects')}
+              <Link
+                to="/projects"
                 className="text-gray-300 hover:text-blue-400 transition duration-300"
               >
                 Projects
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection('skills')}
+              <Link
+                to="/skills"
                 className="text-gray-300 hover:text-blue-400 transition duration-300"
               >
                 Skills
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection('contact')}
+              <Link
+                to="/contact"
                 className="text-gray-300 hover:text-blue-400 transition duration-300"
               >
                 Contact
-              </button>
+              </Link>
             </li>
           </ul>
 
