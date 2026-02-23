@@ -43,6 +43,7 @@ const Hero: React.FC = () => {
             View GitHub
           </a>
         </div>
+        
 
         <div className="mt-12 flex justify-center gap-8 text-gray-400">
           <a
